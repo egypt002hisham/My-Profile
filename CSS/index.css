@@ -1,0 +1,40 @@
+.header {
+    background-color: black;
+    color: azure;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Adds some space inside the header */
+}
+
+.title h1 {
+    font-size: 2rem; /* Adjusts the font size of the title */
+    margin: 0;
+}
+
+.title p {
+    margin: 0; /* Removes default paragraph margins */
+}
+
+.nav ul {
+    list-style: none; /* Removes default bullet points from the list */
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 20px; /* Adds space between each list item */
+}
+
+.nav ul li a {
+    color: azure; /* Link color */
+    font-size: 1rem; /* Adjust link size */
+    padding: 5px 10px; /* Adds padding inside the link */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.nav ul li a:hover {
+    background-color: #444; /* Changes background on hover */
+    border-radius: 5px; /* Adds rounded corners */
+}
