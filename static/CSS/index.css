@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Merriweather&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
 /* General Body Styling */
 body {
@@ -73,24 +72,27 @@ body {
     margin: 100px auto; /* Adds margin from top and centers horizontally */
     padding: 20px;
     z-index: 1; /* Ensures the text is above the background */
-    font-family: "Merriweather", serif;
     margin-left: calc(10% - 100px); /* تعيين الهامش الأيسر ليكون 50% من العرض الكلي للعنصر الأب، ثم خصم 100 بكسل */
     text-justify: distribute-all-lines;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 700;
+    font-style: normal;
     
 }
 
 .hi h1 {
-    font-size: 3.5rem; /* Larger font size for prominence */
+    font-size: 4.5rem; /* Larger font size for prominence */
     margin: 0;
 }
 
 .hi p {
-    font-size: 1rem;
+    font-size: 2rem;
     margin-top: 10px;
 }
 
 strong {
     color: #98e8cd; /* Highlight color for emphasis */
+    
 }
 
 /* Content Section Styling */
