@@ -135,3 +135,29 @@ strong {
     justify-content: space-around;       
     color: white; 
 }
+.items {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* توسيط العناصر داخل كل عنصر */
+    text-align: center; /* توسيط النصوص */
+    margin: 10px; /* مساحة حول كل عنصر */
+    border: 2px solid #98e8cd;
+    padding: 20px; /* أضف padding داخل العنصر لتحسين المساحة الداخلية */
+    border-radius: 10px; /* أضف زوايا دائرية لتخفيف حدة الحدود */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* أضف تأثير الانتقال */
+}
+
+.items:hover {
+    transform: scale(1.05); /* تكبير العنصر عند التمرير فوقه */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* أضف ظل لتأثير التمرير */
+}
+
+.img_items {
+    position: relative; /* يمكن استخدام position: relative لضبط مواقع الصور داخل العناصر */
+    width: 300px; /* عرض الصورة */
+    height: 300px; /* ارتفاع الصورة */
+    object-fit: cover; /* يحافظ على نسبة العرض إلى الارتفاع ويملأ الصورة */
+    border-radius: 10px; /* أضف زوايا دائرية للصورة لتتماشى مع تصميم العنصر */
+    align-items: center; /* توسيط العناصر داخل كل عنصر */
+
+}
