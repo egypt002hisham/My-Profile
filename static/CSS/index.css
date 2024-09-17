@@ -1,15 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Merriweather&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
+html {
+    scroll-behavior: smooth; /* يجعل التمرير بين الأقسام سلساً */
+}
+
 /* General Body Styling */
 body {
     background-color: #020912;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+/* Content Sections */
+section {
+    padding: 100px 20px; /* Padding لإعطاء مساحة من الأعلى والأسفل */
+    min-height: 100vh; /* كل قسم يأخذ ارتفاع نافذة المتصفح بالكامل */
 }
 
 /* Background Styling */
 .background {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -28,7 +39,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6); /* Adds a semi-transparent background */
+    background-color:#020912; /* Adds a semi-transparent background */
     position: relative;
     z-index: 1; /* Ensures the header is above the background */
 }
@@ -99,4 +110,28 @@ strong {
 .content {
     padding: 20px;
     color: #ffffff; /* Ensures text in the content section is visible */
+}
+
+.btu {
+    position: relative;
+    z-index: 1;
+    border: 2px solid #98e8cd;
+    padding: 10px;
+    border-radius: 15px;
+    transition: background-color 1s ease-in-out, color 1s ease-in-out; /* تغيير المدة إلى 1 ثانية لجعل التغير تدريجي أكثر */
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btu:hover {
+    background-color: #98e8cd;
+    color: #020912;
+}
+
+.skills{
+    display: flex;
+    position: relative ;
+    background-color:#020912;
+    justify-content: space-around;       
+    color: white; 
 }
