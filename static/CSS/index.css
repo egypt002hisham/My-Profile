@@ -12,10 +12,11 @@ body {
     
 }
 
-/* Content Sections */
+/*  Sections */
 section {
     padding: 100px 20px; /* Padding لإعطاء مساحة من الأعلى والأسفل */
     min-height: 100vh; /* كل قسم يأخذ ارتفاع نافذة المتصفح بالكامل */
+    transition: opacity 0.5s ease-in-out;
 }
 
 /* Background Styling */
@@ -238,73 +239,145 @@ h3 {
     box-shadow: 0 10px 40px -10px #fff;
 }
 
-#python{
+/* Animation classes */
+.animate #python {
     animation: loading_python 2s normal forwards;
 }
 
-#c{
-    animation: loading_c 2s normal forwards ;
+.animate #c {
+    animation: loading_c 2s normal forwards;
 }
 
-#HTML{
-    animation: loading_H 2s normal forwards ;
+.animate #HTML {
+    animation: loading_H 2s normal forwards;
 }
 
-#CSS{
-    animation: loading_CSS 2s normal forwards ;
+.animate #CSS {
+    animation: loading_CSS 2s normal forwards;
 }
 
-#JS{
-    animation: loading_JS 2s normal forwards ;
+.animate #JS {
+    animation: loading_JS 2s normal forwards;
 }
 
 
-@keyframes loading_python{
+/* Keyframes for animations */
+@keyframes loading_python {
     0% {
-        width: 0%; /* يبدأ الشريط من صفر */
+        width: 0%;
     }
     100% {
-        width: 70%; /* ينتهي الشريط عند 100% */
+        width: 70%;
     }
-
 }
 
-@keyframes loading_c{
+@keyframes loading_c {
     0% {
-        width: 0%; /* يبدأ الشريط من صفر */
+        width: 0%;
     }
     100% {
-        width: 80%; /* ينتهي الشريط عند 100% */
+        width: 80%;
     }
-
 }
 
-@keyframes loading_H{
+@keyframes loading_H {
     0% {
-        width: 0%; /* يبدأ الشريط من صفر */
+        width: 0%;
     }
     100% {
-        width: 100%; /* ينتهي الشريط عند 100% */
+        width: 100%;
     }
-
 }
 
-@keyframes loading_CSS{
+@keyframes loading_CSS {
     0% {
-        width: 0%; /* يبدأ الشريط من صفر */
+        width: 0%;
     }
     100% {
-        width: 60%; /* ينتهي الشريط عند 100% */
+        width: 60%;
     }
-
 }
 
-@keyframes loading_JS{
+@keyframes loading_JS {
     0% {
-        width: 0%; /* يبدأ الشريط من صفر */
+        width: 0%;
     }
     100% {
-        width: 50%; /* ينتهي الشريط عند 100% */
+        width: 50%;
     }
+}
 
+.contact {
+    background-image: url("/static/img/back2.png");
+    padding: 60px 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.contact-content {
+    background: rgba(0, 0, 0, 0.7); /* خلفية داكنة لزيادة وضوح النصوص */
+    padding: 40px;
+    border-radius: 15px;
+    display: inline-block;
+    max-width: 700px;
+    width: 100%;
+    transform: translateY(20px); /* Move content downwards */
+    animation: fadeInUp 1s forwards; /* Apply the animation */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.contact-item div {
+    text-align: left;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #ffcc00;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #ffffff;
 }
