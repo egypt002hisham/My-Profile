@@ -214,6 +214,7 @@ h2:hover {
 
 h3 {
     margin: 10px ; /* تباعد حول العناوين */
+    color: #ffffff;
 }
 
 .ProgressBarContainer {
