@@ -141,7 +141,6 @@ strong {
     align-items: center; /* توسيط العناصر داخل كل عنصر */
     text-align: center; /* توسيط النصوص */
     margin: 10px; /* مساحة حول كل عنصر */
-    border: 2px solid #98e8cd;
     padding: 20px; /* أضف padding داخل العنصر لتحسين المساحة الداخلية */
     border-radius: 10px; /* أضف زوايا دائرية لتخفيف حدة الحدود */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* أضف تأثير الانتقال */
@@ -161,3 +160,31 @@ strong {
     align-items: center; /* توسيط العناصر داخل كل عنصر */
 
 }
+
+
+p {
+    text-align: left;
+    line-height: 1.6;
+    margin: 20px 0;
+    padding: 10px;
+    text-indent: 10px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Times New Roman', serif;
+}
+
+h2 {
+    color: #c7d9fa; /* اختيار لون ملفت للعنوان */
+    font-family: 'Arial', sans-serif; /* اختيار خط أكثر حداثة */
+    font-weight: bold; /* جعل النص أكثر سمكاً */
+    margin-bottom: 20px; /* مسافة بين العنوان والمحتوى */
+    text-transform: uppercase; /* تحويل الأحرف إلى كبيرة */
+    letter-spacing: 2px; /* توسيع المسافة بين الحروف لإعطاء مظهر أنيق */
+    transition: color 0.3s ease; /* إضافة تأثير انتقال لتغير اللون */
+}
+
+h2:hover {
+    color: #09346a; /* تغيير لون النص عند التمرير */
+}
+
+
