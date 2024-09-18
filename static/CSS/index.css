@@ -188,3 +188,123 @@ h2:hover {
 }
 
 
+
+
+.language{
+    border:1px solid #09346a ;
+    border-radius: 15px; /* زوايا دائرية لتحسين المظهر */
+
+}
+.DataProgressBars {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    margin: 20px; /* مساحة حول العنصر */
+    padding: 10px; /* تباعد داخلي */    
+    background-color: #020912; /* خلفية العنصر */
+    
+}
+
+.ico {
+    width: 50px; /* عرض الصورة */
+    height: 50px; /* ارتفاع الصورة */
+    
+}
+
+h3 {
+    margin: 10px ; /* تباعد حول العناوين */
+}
+
+.ProgressBarContainer {
+    width: 100%; /* العرض الكامل للعنصر */
+    background: linear-gradient(90deg, #f0f0f0, #020912); /* تدرج لوني لخلفية شريط التحميل */
+    border-radius: 10px; /* زوايا دائرية للشريط */
+    overflow: hidden; /* إخفاء الأجزاء الزائدة */
+    margin-top: 10px; /* تباعد فوق شريط التحميل */
+    margin-left: 10px;
+    position: relative; /* لضبط موضع الشريط بداخل الحاوية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل لتحسين المظهر */
+}
+
+.ProgressBar {
+    background-color: white; /* لون شريط التحميل */
+    color: #389ef8; /* لون النص داخل شريط التحميل */
+    text-align: center; /* توسيط النص داخل الشريط */
+    line-height: 30px; /* محاذاة النص عمودياً داخل الشريط */
+    height: 30px; /* ارتفاع شريط التحميل */
+    border-radius: 10px; /* زوايا دائرية للشريط */
+    font-size: 16px; /* حجم النص */
+    font-weight: bold; /* جعل النص أكثر وضوحًا */ 
+    box-shadow: 0 10px 40px -10px #fff;
+}
+
+#python{
+    animation: loading_python 2s normal forwards;
+}
+
+#c{
+    animation: loading_c 2s normal forwards ;
+}
+
+#HTML{
+    animation: loading_H 2s normal forwards ;
+}
+
+#CSS{
+    animation: loading_CSS 2s normal forwards ;
+}
+
+#JS{
+    animation: loading_JS 2s normal forwards ;
+}
+
+
+@keyframes loading_python{
+    0% {
+        width: 0%; /* يبدأ الشريط من صفر */
+    }
+    100% {
+        width: 70%; /* ينتهي الشريط عند 100% */
+    }
+
+}
+
+@keyframes loading_c{
+    0% {
+        width: 0%; /* يبدأ الشريط من صفر */
+    }
+    100% {
+        width: 80%; /* ينتهي الشريط عند 100% */
+    }
+
+}
+
+@keyframes loading_H{
+    0% {
+        width: 0%; /* يبدأ الشريط من صفر */
+    }
+    100% {
+        width: 100%; /* ينتهي الشريط عند 100% */
+    }
+
+}
+
+@keyframes loading_CSS{
+    0% {
+        width: 0%; /* يبدأ الشريط من صفر */
+    }
+    100% {
+        width: 60%; /* ينتهي الشريط عند 100% */
+    }
+
+}
+
+@keyframes loading_JS{
+    0% {
+        width: 0%; /* يبدأ الشريط من صفر */
+    }
+    100% {
+        width: 50%; /* ينتهي الشريط عند 100% */
+    }
+
+}
