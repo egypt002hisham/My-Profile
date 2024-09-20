@@ -29,7 +29,7 @@ section {
     background-image: url("/static/img/back.png"); /* Your background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the background image */
-    background-size: contain; /* Keeps the original size of the image */
+    background-size: cover; /* Keeps the original size of the image */
     z-index: -1; /* Sends the background behind everything else */
 }
 
@@ -49,6 +49,7 @@ section {
 .title h1 {
     font-size: 2rem;
     margin: 0;
+    text-shadow: 2px 2px 5px #fff; /* Adding a white shadow to the header text */
 }
 
 /* Navigation Menu */
@@ -81,15 +82,12 @@ section {
 .hi {
     position: relative;
     color: #ffffff;
-    margin: 100px auto; /* Adds margin from top and centers horizontally */
+    margin: 100px auto;
     padding: 20px;
-    z-index: 1; /* Ensures the text is above the background */
-    margin-left: calc(10% - 100px); /* تعيين الهامش الأيسر ليكون 50% من العرض الكلي للعنصر الأب، ثم خصم 100 بكسل */
-    text-justify: distribute-all-lines;
+    z-index: 1;
+    text-align: start;
     font-family: "Nanum Myeongjo", serif;
     font-weight: 700;
-    font-style: normal;
-    
 }
 
 .hi h1 {
@@ -382,4 +380,57 @@ h3 {
 
 .contact-item a:hover {
     color: #ffffff;
+}
+
+/* Media Queries لتحسين التفاعل مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 1.2rem;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li {
+        margin: 5px 0;
+    }
+
+    .hi h1 {
+        font-size: 2rem;
+    }
+
+    .hi p {
+        font-size: 1rem;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .items {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .contact-content {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .hi p {
+        font-size: 1.2rem;
+    }
+
+    .btu {
+        font-size: 1rem;
+    }
 }
