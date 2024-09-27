@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Merriweather&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
+*{
+    margin: 0;
+    border: 0;
+}
 html {
     scroll-behavior: smooth; /* يجعل التمرير بين الأقسام سلساً */
 }
@@ -26,7 +30,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/static/img/back.png"); /* Your background image */
+    background-image: url("/static/img/back.png"); /*  background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the background image */
     background-size: cover; /* Keeps the original size of the image */
@@ -229,8 +233,8 @@ h3 {
 
 .ProgressBar {
     background-color: white; /* لون شريط التحميل */
-    color: #389ef8; /* لون النص داخل شريط التحميل */
-    text-align: center; /* توسيط النص داخل الشريط */
+    color: #389ef8; /*color font*/
+    text-align: center; /* text center progressbar*/
     line-height: 30px; /* محاذاة النص عمودياً داخل الشريط */
     height: 30px; /* ارتفاع شريط التحميل */
     border-radius: 10px; /* زوايا دائرية للشريط */
@@ -315,7 +319,7 @@ h3 {
 }
 
 .contact-content {
-    background: rgba(0, 0, 0, 0.7); /* خلفية داكنة لزيادة وضوح النصوص */
+    background: rgba(0, 0, 0, 0.7); 
     padding: 40px;
     border-radius: 15px;
     display: inline-block;
@@ -381,8 +385,89 @@ h3 {
 .contact-item a:hover {
     color: #ffffff;
 }
+.open-silebar-button {
+    position: fixed;
+    top: 20px;
+    right: 20px; /* لتثبيت الزر في أقصى يمين الشاشة، استخدم left: 20px للأيسر */
+    z-index: 1000;
+    opacity: 0;
+}
 
-/* Media Queries لتحسين التفاعل مع الشاشات الصغيرة */
+input{
+    position: fixed;
+    top: 0;
+    right: 0; /* إذا كنت تريد إظهاره في أقصى اليمين */
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.link-container {
+    position: fixed;
+    top: 0;
+    right: 0; /* إذا كنت تريد إظهاره في أقصى اليمين */
+    width: 250px; /* عرض القائمة */
+    height: 100%;
+    background-color: #333;
+    z-index: 999;
+    transform: translateX(100%);
+    overflow-y: none;
+    transition: transform 0.3s ease-in-out;
+    
+    
+}
+
+.link-container ul {
+    margin-top: 30px;
+    padding: 30px;
+    list-style: none; /* لإزالة النقاط من القائمة */
+}
+
+.link-container ul li {
+    margin-top: 15px; /* تقليل الهوامش بين العناصر */
+    width: 100%;
+
+}
+
+.link-container ul li a {
+    display: block; /* اجعل الرابط عنصراً كتلة */
+    padding: 15px 20px; /* حدد هوامش داخلية */
+    background-color: #4a4b4d; /* لون الخلفية */
+    width: 100%;
+    color: #ffffff; /* لون النص */
+    text-align: center; /* محاذاة النص في الوسط */
+    text-decoration: none; /* إزالة خط التسطير */
+    border-radius: 5px; /* الزوايا المستديرة */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* تأثيرات الانتقال */
+}
+
+/* تأثير عند التمرير على الأزرار */
+.link-container ul li a:hover {
+    background-color: #0056b3; /* لون الخلفية عند التمرير */
+    transform: translateY(-2px); /* تأثير الارتفاع عند التمرير */
+}
+
+/* تأثير عند الضغط على الأزرار */
+.link-container ul li a:active {
+    transform: translateY(0); /* إزالة تأثير الارتفاع عند الضغط */
+}
+
+#Sidebar-active:checked ~ .link-container {
+    transform: translateX(0);
+}
+#Sidebar-active:checked ~ .open-silebar-button {
+    opacity: 0;
+}
+/* زر الإغلاق */
+.close-silebar-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+
+/* Media Queries */
 @media (max-width: 768px) {
     .title h1 {
         font-size: 1.2rem;
@@ -433,4 +518,11 @@ h3 {
     .btu {
         font-size: 1rem;
     }
+    .open-silebar-button{
+        opacity: 1;
+    }
+    .uul{
+        opacity: 0;
+    }
+    
 }
