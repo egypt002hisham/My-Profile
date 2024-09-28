@@ -8,11 +8,12 @@ html {
     scroll-behavior: smooth; /* يجعل التمرير بين الأقسام سلساً */
 }
 
-/* General Body Styling */
+/*General Body Styling*/
 body {
     background-color: #020912;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
     
 }
 
@@ -21,6 +22,9 @@ section {
     padding: 100px 20px; /* Padding لإعطاء مساحة من الأعلى والأسفل */
     min-height: 100vh; /* كل قسم يأخذ ارتفاع نافذة المتصفح بالكامل */
     transition: opacity 0.5s ease-in-out;
+    
+ 
+   
 }
 
 /* Background Styling */
@@ -35,10 +39,12 @@ section {
     background-position: center; /* Centers the background image */
     background-size: cover; /* Keeps the original size of the image */
     z-index: -1; /* Sends the background behind everything else */
+    pointer-events: none;
 }
 
 /* Header Styling */
 .header {
+    user-select: none;
     color: #ffffff;
     display: flex;
     justify-content: space-between;
@@ -53,7 +59,7 @@ section {
 .title h1 {
     font-size: 2rem;
     margin: 0;
-     text-shadow: 2px 2px 5px #fff; /* Adding a white shadow to the header text */
+    text-shadow: 2px 2px 5px #fff; /* Adding a white shadow to the header text */
 }
 
 /* Navigation Menu */
@@ -84,7 +90,7 @@ section {
 
 /* Hi Section Styling */
 .hi {
-    position: relative;
+    user-select: none;
     color: #ffffff;
     margin: 100px auto;
     padding: 20px;
@@ -189,8 +195,6 @@ h2 {
 h2:hover {
     color: #09346a; /* تغيير لون النص عند التمرير */
 }
-
-
 
 
 
@@ -407,10 +411,9 @@ input{
     right: 0; /* إذا كنت تريد إظهاره في أقصى اليمين */
     width: 250px; /* عرض القائمة */
     height: 100%;
-    background-color: #333;
+    background-color: #020912;
     z-index: 999;
     transform: translateX(100%);
-    overflow-y: none;
     transition: transform 0.3s ease-in-out;
     
     
@@ -429,16 +432,20 @@ input{
 }
 
 .link-container ul li a {
+    position: relative;
     display: block; /* اجعل الرابط عنصراً كتلة */
-    padding: 15px 20px; /* حدد هوامش داخلية */
-    background-color: #4a4b4d; /* لون الخلفية */
+    padding: 15px 10px; /* حدد هوامش داخلية */
+    border:1px solid #98e8cd;
+    background-color: transparent; /* لون الخلفية */
     width: 100%;
+    z-index: 1000;
     color: #ffffff; /* لون النص */
     text-align: center; /* محاذاة النص في الوسط */
     text-decoration: none; /* إزالة خط التسطير */
     border-radius: 5px; /* الزوايا المستديرة */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s; /* تأثيرات الانتقال */
+    right: 10px;
 }
 
 /* تأثير عند التمرير على الأزرار */
@@ -460,7 +467,7 @@ input{
 }
 /* زر الإغلاق */
 .close-silebar-button {
-    position: absolute;
+    position: flex;
     top: 10px;
     left: 10px;
     cursor: pointer;
@@ -469,8 +476,13 @@ input{
 
 /* Media Queries */
 @media (max-width: 768px) {
+    .hi{
+        margin: 30px auto;
+
+    }
     .title h1 {
-        font-size: 1.2rem;
+        font-size: 2rem;
+        margin-left: 3%;
     }
 
     .nav ul {
